@@ -193,23 +193,23 @@ juce::AudioProcessorValueTreeState::ParameterLayout SimpleEQAudioProcessor:: cre
    
     // Low cut frequency
     layout.add(std::make_unique<juce::AudioParameterFloat>
-                               ("LCF","LCF",juce::NormalisableRange<float>
+                               ("LowCF","Low Cut Freq",juce::NormalisableRange<float>
                                             (20.f,20000.f,1.f,1.f),20.f));
     // High Cut frequency
     layout.add(std::make_unique<juce::AudioParameterFloat>
-                               ("HCF","HCF",juce::NormalisableRange<float>
-                                            (20000.f,20.f,1.f,1.f),20000.f));
+                               ("HighCF","Hi Cut Freq",juce::NormalisableRange<float>
+                                            (20.f,20000.f,1.f,1.f),20000.f));
     // Peak Frequency
     layout.add(std::make_unique<juce::AudioParameterFloat>
-                               ("PF","PF",juce::NormalisableRange<float>
+                               ("PeakF","Peak Freq",juce::NormalisableRange<float>
                                           (20.f,20000.f,1.f,1.f),1000.f));
     // Peak Band Gain
     layout.add(std::make_unique<juce::AudioParameterFloat>
-                               ("PG","PG",juce::NormalisableRange<float>
+                               ("PeakG","Peak Gain",juce::NormalisableRange<float>
                                           (-24.f,24.f,0.5f,1.f),0.0f));
     // Peak Band Quality
     layout.add(std::make_unique<juce::AudioParameterFloat>
-                               ("PQ","PQ",juce::NormalisableRange<float>
+                               ("PeakQ","Peak Q",juce::NormalisableRange<float>
                                           (0.1f,10.f,0.05f,1.f),1.f));
     
     // Creates string array for slope choices
@@ -223,10 +223,10 @@ juce::AudioProcessorValueTreeState::ParameterLayout SimpleEQAudioProcessor:: cre
     }
     
     // Low Cut slope
-    layout.add(std::make_unique<juce::AudioParameterChoice>("LC Slope", "LC Slope", stringArray, 0));
+    layout.add(std::make_unique<juce::AudioParameterChoice>("Low Cut Slope", "Low Cut Slope", stringArray, 0));
     
     // High cut slope
-    layout.add(std::make_unique<juce::AudioParameterChoice>("LC Slope", "LC Slope", stringArray, 0));
+    layout.add(std::make_unique<juce::AudioParameterChoice>("Hi Cut Slope", "Hi Cut Slope", stringArray, 0));
    
     return layout;
 }
