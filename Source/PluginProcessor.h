@@ -12,10 +12,10 @@
 
 enum Slope
 {
-    Slope_6,
     Slope_12,
-    Slope_18,
-    Slope_24
+    Slope_24,
+    Slope_36,
+    Slope_48
 };
 
 struct ChainSettings
@@ -24,8 +24,8 @@ struct ChainSettings
     float lowCutFreq{0}, highCutFreq{0};
    
     
-    Slope lowCutSlope{Slope::Slope_6};
-    Slope highCutSlope{Slope::Slope_6};
+    Slope lowCutSlope{Slope::Slope_12};
+    Slope highCutSlope{Slope::Slope_12};
 
 };
 
