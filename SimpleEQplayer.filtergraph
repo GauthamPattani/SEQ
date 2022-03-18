@@ -62,12 +62,12 @@
     </LAYOUT>
   </FILTER>
   <FILTER uid="5" x="0.5175" y="0.6596153846153846" uiLastX_Normal="39"
-          uiLastY_Normal="210" uiopen_Normal="0">
+          uiLastY_Normal="210" uiopen_Normal="1">
     <PLUGIN name="SimpleEQ" format="AudioUnit" category="Effect" manufacturer="yourcompany"
             version="1.0.0" file="AudioUnit:Effects/aufx,Zpqa,Manu" uniqueId="7664796c"
-            isInstrument="0" fileTime="0" infoUpdateTime="17f72060731" numInputs="2"
+            isInstrument="0" fileTime="0" infoUpdateTime="17f9c30d597" numInputs="2"
             numOutputs="2" isShell="0" uid="7664796c"/>
-    <STATE>261.hAGaoMGcv.y0AHv.DTfAGfPBJHwDTTAWsEla0YVXiQWcxUlbTQVXzEFWkwVYsUlaz0hag0VYWMWchQWdvU1U1Ulbyk1atQEc4AWYT4VXsUlDMEla08DDDA..............G..0wW5O.B..DLlMWB.....AVt6I8fz4nRfk6hxO....DX4txzittvHP1ksy.....7k6.GB.....Ru.CM.QTwDkLQ6vCQASUI4Fb0QWzNDgUOUGcvUGcRnEbwEFD.HQX0YFdXUkazkFcrUFYHbAIoXiOFsDTUwYniVJppB6r59avFC.......DP..........XA...................vy</STATE>
+    <STATE>634.hAGaoMGcv.C1AHv.DTfAGfPBJrvDTTgEWvUag4VclE1XzUmbkIGUjEFcgwUYrUVak4Fcs3VXsU1UyUmXzkGbkckckI2bo8laTQWdvU1WP7fZ0MVYPwVcmklaSQWXzUFUtEVakIQSg4VcOAAQ..............vAT.e2Y3C7yyDEwKAH+.....yhsn......zrkZ91ittvnWUn1h.....D1iQjE.....lsQ4X9Cf..fzLzfCQDULQISzO.QTvTURtAWczE8CRX0S0QGb0QmDZAWbgAA.RDVclg2SQDvPPElbg0VYzUlbyA..Ab.TAIUPMAP.BjFY.DfCEfTZmg1P0QGHFIWYwAfcgwVckAP.IP.......f3z.A.TAIUPMAP.BjFY.DvCEfTZmg1P0QGHSw1avUF.1EFa0UF.Aj.A............PEjTA0D.AHPZjAP.MT.Suc2P0QGHFIWYwAfcgwVckAP.IP.........M.A.TAIUPMAP.BjFY.DfCEvza2MTczAxTr8FbkAfcgwVckAP.IP.............TAIUPMAP.BjFY.DvBE.UYgsFHFIWYwAfcgwVckAP.IP........zi.A.TAIUPMAP.BjFY.DvBE.UYgsFHGEVZtAfcgwVckAP.IP.............TAIUPMAP.BjFY.DfCE.UYgsFHQUWXrkFc4AfcgwVckAP.IP.........7+..VU4FcoQGakQF.H.PF.XB.q..N..D.HAPS.7E.jAPZ..K.0Bvs.jK.7Bfu.PL.GCfy.LM.UCf1BDB.......f.A..........F..................f.p.</STATE>
     <LAYOUT>
       <INPUTS>
         <BUS index="0" layout="L R"/>
@@ -81,7 +81,7 @@
           uiLastY_Normal="161" uiopen_Normal="0">
     <PLUGIN name="AUAudioFilePlayer" format="AudioUnit" category="Generator"
             manufacturer="Apple" version="1.6.0" file="AudioUnit:Generators/augn,afpl,appl"
-            uniqueId="6163676e" isInstrument="0" fileTime="0" infoUpdateTime="17f72060731"
+            uniqueId="6163676e" isInstrument="0" fileTime="0" infoUpdateTime="17f9c30d598"
             numInputs="0" numOutputs="2" isShell="0" uid="6163676e"/>
     <STATE>137.hAGaoMGcv.i0AHv.DTfAGfPBJr.CT4VXsUFWsEla0YVXiQWcxUlbTQVXzEFUzkGbkc0b0IFc4AWYWYWYxMWZu4FVU4FcoQGakQlDgAGbrAjDgU2YtIQXlAGaP..BUnwIrDSNAozSPUkV........AD..........M....................vE</STATE>
     <LAYOUT>

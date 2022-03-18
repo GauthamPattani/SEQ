@@ -22,9 +22,9 @@ void LookAndFeel::drawRotarySlider(juce::Graphics& g,
     using namespace juce;
     auto bounds = Rectangle<float>(x,y,width,height);
     
-    g.setColour(Colour(97u, 18u, 167u));
+    g.setColour(Colour(0u, 102u, 204u));// Knobs
     g.fillEllipse(bounds);
-    g.setColour(Colour(255u, 154u, 1u));
+    g.setColour(Colour(255u, 255u, 255u));
     g.drawEllipse(bounds, 1.f);
     
     if(auto * rswl = dynamic_cast<RotarySliderWithLabels*>(&slider))
@@ -93,7 +93,7 @@ void RotarySliderWithLabels::paint(juce::Graphics &g)
     auto center = sliderBounds.toFloat().getCentre();
     auto radius = sliderBounds.getWidth() * 0.5f;
     
-    g.setColour(Colour(0u,172u,1u));
+    g.setColour(Colour(0u, 102u, 204u)); // Labels
     g.setFont(getTextHeight());
     
     auto numChoices = labels.size();
@@ -372,7 +372,7 @@ void SimpleEQAudioProcessorEditor::resized()
     // subcomponents in your editor..
     
     auto bounds =getLocalBounds();
-    float hRatio = 40.f /100.f ; //JUCE_LIVE_CONSTANT(33)/100.f;
+    float hRatio = 40.f /100.f ; //JUCE_LIVE_CONSTANT(40)/100.f;
     auto responseArea = bounds.removeFromTop(bounds.getHeight()*hRatio);
     
     responseCurveComponent.setBounds(responseArea);
