@@ -111,7 +111,7 @@ if(auto* pb = dynamic_cast<PowerButton*>(&toggleButton))
       g.setColour(colour);
       
       auto bounds = toggleButton.getLocalBounds();
-//      g.drawRect(bounds*0.9);
+   g.drawRect(bounds.toFloat());
       
       auto insetRect = bounds.reduced(4);
       
