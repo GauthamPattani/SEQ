@@ -161,6 +161,11 @@ struct ChainSettings
     
     Slope lowCutSlope{Slope::Slope_12};
     Slope highCutSlope{Slope::Slope_12};
+    
+    bool lowCutBypassed {false};
+    bool peakBypassed {false};
+    bool highCutBypassed {false};
+
 
 };
 
@@ -304,7 +309,7 @@ private:
     
     void updateFilters();
     
-    juce::dsp::Oscillator<float> osc;
+//    juce::dsp::Oscillator<float> osc;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleEQAudioProcessor)
 };

@@ -308,6 +308,18 @@ private:
                 lowCutSlopeSliderAttachment,
                 highCutSlopeSliderAttachment;
     
+    juce::ToggleButton lowCutBypassButton,
+                        peakBypassButton,
+                        highCutBypassButton,
+                        analyzerEnableButton;
+    
+    using ButtonAttachment = APVTS::ButtonAttachment;
+    ButtonAttachment lowCutBypassButtonAttachment,
+                    peakBypassButtonAttachment,
+                    highCutBypassButtonAttachmnet,
+                    analyzerEnableButtonAttachment;
+    
+    
     std::vector<juce::Component*> getComps();
     
    
