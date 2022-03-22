@@ -22,9 +22,12 @@ void LookAndFeel::drawRotarySlider(juce::Graphics& g,
     using namespace juce;
     auto bounds = Rectangle<float>(x,y,width,height);
     
-    g.setColour(Colour(0u, 102u, 204u));// Knobs
+    auto enabled = slider.isEnabled();
+    
+    g.setColour(enabled ? Colour(0u, 102u, 204u) : Colours::darkgrey);// Knobs
     g.fillEllipse(bounds);
-    g.setColour(Colour(255u, 255u, 255u));
+    
+    g.setColour(enabled ? Colour(255u, 255u, 255u) : Colours::grey);
     g.drawEllipse(bounds, 1.f);
     
     if(auto * rswl = dynamic_cast<RotarySliderWithLabels*>(&slider))
@@ -629,9 +632,44 @@ analyzerEnableButtonAttachment(audioProcessor.apvts, "Analyzer Enabled", analyze
     highCutBypassButton.setLookAndFeel(&lnf);
     analyzerEnableButton.setLookAndFeel(&lnf);
     
+    auto safePtr = juce::Component::SafePointer<SimpleEQAudioProcessorEditor>(this);
+    
+    peakBypassButton.onClick = [safePtr]()
+    {
+       if (auto* comp = safePtr.getComponent())
+       {
+           auto bypassed = comp ->peakBypassButton.getToggleState();
+           
+           comp -> peakFreqSlider.setEnabled(!bypassed);
+           comp -> peakGainSlider.setEnabled(!bypassed);
+           comp -> peakQualitySLider.setEnabled(!bypassed);
+       }
+    };
+    
+    lowCutBypassButton.onClick = [safePtr]()
+    {
+        if (auto* comp = safePtr.getComponent())
+        {
+            auto bypassed = comp ->lowCutBypassButton.getToggleState();
+            
+            comp -> lowCutFreqSlider.setEnabled(!bypassed);
+            comp -> lowCutSlopeSlider.setEnabled(!bypassed);
+            
+        }
+    };
+        highCutBypassButton.onClick = [safePtr]()
+        {
+            if (auto* comp = safePtr.getComponent())
+            {
+                auto bypassed = comp ->highCutBypassButton.getToggleState();
+                
+                comp -> highCutFreqSlider.setEnabled(!bypassed);
+                comp -> highCutSlopeSlider.setEnabled(!bypassed);
+                
+            }
+    };
+    
     setSize (600, 480);
-    
-    
 }
 
 SimpleEQAudioProcessorEditor::~SimpleEQAudioProcessorEditor()
