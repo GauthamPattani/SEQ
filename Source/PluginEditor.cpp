@@ -111,7 +111,7 @@ if(auto* pb = dynamic_cast<PowerButton*>(&toggleButton))
       g.setColour(colour);
       
       auto bounds = toggleButton.getLocalBounds();
-      g.drawRect(bounds);
+//      g.drawRect(bounds*0.9);
       
       auto insetRect = bounds.reduced(4);
       
@@ -671,7 +671,7 @@ void SimpleEQAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
     
-    auto bounds =getLocalBounds();
+    auto bounds = getLocalBounds();
     
     auto analyzerEnabledArea = bounds.removeFromTop(25);
     analyzerEnabledArea.setWidth(100);
